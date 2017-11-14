@@ -1,0 +1,31 @@
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    min-height: 1200px;
+    background-color: #849d8f;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.slider-button {
+    display: inline-block;
+    padding: 13px 43px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 7px;
+    vertical-align: top;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    border-radius: 100px;
+    color: #ffffff;
+    background: #f26843;
+    background-image: linear-gradient(90 deg, rgb(231, 74,53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: 0 px 2 px 2 px 0 px rgba(172, 16, 0.64);
+}
+
+
+
+
+
