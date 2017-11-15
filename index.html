@@ -36,49 +36,36 @@
             <ul class="user-navigation">
                 <li class="search">
                     <h2 class="hidden">Поиск</h2>
-                    <form class="modal-login user-nav-btn-small">
+                    <button type="button" class="user-nav-btn-small"><img src="img/loupe.svg" alt="" width="21" height="20">
+                    </button>
+                     <form class="modal-login search-button-active">
+                        <label for="search" class="hidden">Поиск</label>
                         <input class="user-field" type="search" placeholder="Что ищем?">
-                        <!--Здесь будет форма-->
                     </form>
                 </li>
                 <li class="user-login">
                     <h2 class="hidden">Личный кабинет</h2>
-                    <a class="user-nav-btn-small" href="#">Вход</a>
+                    <button class="user-nav-btn-small" type="button"> <img src="img/entrance.svg" alt="" width="21" height="19"> Вход</button>
                     <form class="modal-login">
-                        <input class="user-field" type="email" placeholder="Электронная почта">
-                        <input class="user-field" type="password" placeholder="Пароль">
-                        <input class="usual-button" type="submit" value="Войти">
-                        <!--Здесь будет форма-->
-                        <a class="login-extralinks" href="#">Забыли пароль?</a>
-                        <a class="login-extralinks" href="#">Новая регистрация</a>
+                        <p>
+                        <label class="hidden" for="user-email">Логин</label>
+                        <input class="user-field" type="email" id="user-email" placeholder="Электронная почта">
+                        </p>
+                        <p>
+                        <label class="hidden" for="user-password">Пароль</label>
+                        <input class="user-field" type="password" id="user-password" placeholder="Пароль">
+                        </p>
+                        <p class="login-extralinks">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                        <button class="usual-button" type="submit">Войти</button>
+                        </p> 
                     </form>
                 </li>
                 <li class="cart">
                     <h2 class="hidden">Корзина</h2>
-                    <span class="user-nav-btn-small">Пусто</span>
-                    <form>
-                        <button type="button" class="user-nav-btn-small">2 товара <img src="img/basket-red.svg" alt=""></button>
-                        <table class="modal-login">
-                            <tr>
-                                <td><img src="crestique.jpg" alt=""></td>
-                                <td><img src="mini-icecream.jpg" alt=""></td>
-                                <td>Пломбир с апельсиновым джемом</td>
-                                <td>1,5 кг &#42; <span>200 руб.</span></td>
-                                <td>300 руб.</td>
-                            </tr>
-                            <tr>
-                                <td><img src="crestique.jpg" alt=""></td>
-                                <td><img src="mini-icecream2.jpg" alt=""></td>
-                                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                                <td>1,5 кг &#42; <span>300 руб.</span></td>
-                                <td>450 руб.</td>
-                            </tr>
-                            <tr>
-                                <td class="cart-summ" colspan="5">Итого: 750 руб.</td>
-                            </tr>
-                        </table>
-                        <input class="usual-button" type="submit" value="Оформить заказ">
-                    </form>
+                    <button class="user-nav-btn-small" type="button"><img src="img/basket.svg" alt="" width="21" height="20" disabled> Пусто
+                    </button>
                 </li>
             </ul>
             <p class="work-hours">C 10 до 20, ежедневно<br>
