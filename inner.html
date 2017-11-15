@@ -10,11 +10,11 @@
 <body>
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html">
-            <img src="img/logo.png" width="154" height="64" alt="Gllacy">
+            <a class="main-header-logo">
+            <img src="img/logo.svg" alt="Gllacy">
             </a>
             <ul class="site-navigation">
-                <li class="catalogue-dropdown current-page-menu">Каталог
+                <li class="catalogue-dropdown current-page-menu"><a href="#">Каталог</a>
                     <ul class="sub-menu">
                         <li class="sub"><a class="menuitem-bold" href="#">Новинки</a></li>
                         <li class="sub"><a href="inner.html">Сливочное</a></li>
@@ -27,31 +27,57 @@
                 <li><a href="#">О Компании</a></li>
             </ul>
         </nav>
-    <section>
-        <ul class="user-navigation">
-            <li class="search">
-                <form class="modal-login">
+       <section>
+            <ul class="user-navigation">
+                <li class="search">
                     <h2 class="hidden">Поиск</h2>
-                    <!--Здесь будет форма-->
-                </form>
-            </li>
-            <li class="user-login">
-                <h2 class="hidden">Личный кабинет</h2>
-                <a class="login-button" href="#">Вход</a>
-                <form class="modal-login">
-                    <!--Здесь будет форма-->
-                    <a class="login-extralinks" href="#">Забыли пароль?</a>
-                    <a class="login-extralinks" href="#">Новая регистрация</a>
-                </form>            
-            </li>
-            <li class="cart">
-                <h2 class="hidden">Корзина</h2>
-                <span>2 товара</span>
-            </li>
-        </ul>
-        <p class="work-hours">C 10 до 20, ежедневно<br>
-            <span class="phone">8 812 450-25-25</span></p>
-    </section>
+                    <form class="modal-login user-nav-btn-small">
+                        <input class="user-field" type="search" placeholder="Что ищем?">
+                        <!--Здесь будет форма-->
+                    </form>
+                </li>
+                <li class="user-login">
+                    <h2 class="hidden">Личный кабинет</h2>
+                    <a class="user-nav-btn-small" href="#">Вход</a>
+                    <form class="modal-login">
+                            <input class="user-field" type="email" placeholder="Электронная почта">
+                            <input class="user-field" type="password" placeholder="Пароль">
+                            <input class="usual-button" type="submit" value="Войти">
+                        <!--Здесь будет форма-->
+                        <a class="login-extralinks" href="#">Забыли пароль?</a>
+                        <a class="login-extralinks" href="#">Новая регистрация</a>
+                    </form>
+                </li>
+                <li class="cart">
+                    <h2 class="hidden">Корзина</h2>
+                    <form>
+                        <table class="modal-login">
+                            <tr>
+                                <td><img src="crestique.jpg" alt=""></td>
+                                <td><img src="mini-icecream.jpg" alt=""></td>
+                                <td>Пломбир с апельсиновым джемом</td>
+                                <td>1,5 кг &#42; <span>200 руб.</span></td>
+                                <td>300 руб.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="crestique.jpg" alt=""></td>
+                                <td><img src="mini-icecream2.jpg" alt=""></td>
+                                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                                <td>1,5 кг &#42; <span>300 руб.</span></td>
+                                <td>450 руб.</td>
+                            </tr>
+                            <tr>
+                                <td class="cart-summ" colspan="5">Итого: 750 руб.</td>
+                            </tr>
+                        </table>
+                        <input class="usual-button" type="submit" value="Оформить заказ">
+                        <button type="button" class="user-nav-btn-small">2 товара <img src="img/basket-red.svg" alt=""></button>
+                    </form>
+                </li>
+            </ul>
+            <p class="work-hours">C 10 до 20, ежедневно<br>
+                <span class="phone">8 812 450-25-25</span></p>
+        </section>
 </header>    
 <main class="container">
         <h1 class="main-title">Сливочное мороженое</h1>
@@ -63,7 +89,56 @@
         <section class="filters">
             <h2 class="hidden">Фильтры товаров</h2>
             <!--Здесь будет форма-->
-        </section>
+           <form>
+            <fieldset>
+            <legend>Сортировка:</legend>
+                <select>
+                    <option value="popular">по популярности</option>
+                    <option value="price">по цене</option>
+                    <option value="fatness">по жирности</option>
+                </select>
+            </fieldset>
+            <fieldset>
+            <legend>Цена: 100 руб. - 500 руб.</legend>
+
+            </fieldset>
+            <fieldset>
+            <legend>Жирность:</legend>
+                <ul>
+                    <li>
+                    <input type="radio" value="0" name="fatness"> 0%
+                    </li>
+                    <li>
+                    <input type="radio" value="1-10" name="fatness" checked> до 10%
+                    </li>
+                    <li>
+                    <input type="radio" value="11-30" name="fatness"> до 30% </li>
+                    <li>
+                    <input type="radio" value="31+" name="fatness"> выше 30% </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+            <legend>Наполнители:</legend>
+                <ul>
+                    <li>
+                    <input type="checkbox" value="shoko" name="fillings" checked> шоколадные
+                    </li>
+                    <li>
+                    <input type="checkbox" value="sugar" name="fillings" checked> сахарные присыпки
+                    </li>
+                    <li>
+                    <input type="checkbox" value="fruits" name="fillings"> фрукты
+                    </li>
+                    <li>
+                    <input type="checkbox" value="syrop" name="fillings"> сиропы
+                    </li>
+                    <li>
+                    <input type="checkbox" value="jam" name="fillings"> джемы
+                    </li>
+                </ul>    
+            </fieldset>
+            <button type="submit">Применить</button>
+        </form>
         <section class="catalogue-inner">
             <h2 class="hidden">Каталог мороженого</h2>
             <ul>
@@ -181,6 +256,14 @@
             <a href="#"><img class=social-icon src="img/" alt="Инстаграм"></a>
             <a href="#"><img class=social-icon src="img/" alt="Фейсбук"></a>
             <a href="#"><img class=social-icon src="img/" alt="В Контакте"></a>
+            <!--Добавить картинкам размеры и ссылки-->
+        </section>
+        <section class="footer-social">
+            <h2 class="hidden">Мы в социальных сетях</h2>
+            <a href="#"><img class=social-icon src="img/twitter.svg" alt="Твиттер"></a>
+            <a href="#"><img class=social-icon src="img/instagram.svg" alt="Инстаграм"></a>
+            <a href="#"><img class=social-icon src="img/fb.svg" alt="Фейсбук"></a>
+            <a href="#"><img class=social-icon src="img/vk.svg" alt="В Контакте"></a>
             <!--Добавить картинкам размеры и ссылки-->
         </section>
         <section class="footer-link">

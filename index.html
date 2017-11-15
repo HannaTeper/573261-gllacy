@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
     <!--Установить шрифт-->
     <title>Глейси – магазин мороженого </title>
 </head>
+
 <body>
+<input type="radio" id="btn-1" name="toggle" checked>
+<input type="radio" id="btn-2" name="toggle">
+<input type="radio" id="btn-3" name="toggle">
+<div class="site-wrapper">
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo">
             <img src="img/logo.svg" alt="Gllacy">
             </a>
             <ul class="site-navigation">
-                <li class="catalogue-dropdown">Каталог
+                <li class="catalogue-dropdown"><a href="#">Каталог</a>
                     <ul class="sub-menu">
                         <li class="sub"><a class="menuitem-bold" href="#">Новинки</a></li>
                         <li class="sub"><a href="inner.html">Сливочное</a></li>
@@ -26,56 +32,85 @@
                 <li><a href="#">О Компании</a></li>
             </ul>
         </nav>
-    <section>
-        <ul class="user-navigation">
-            <li class="search">
-                <form class="modal-login">
+        <section>
+            <ul class="user-navigation">
+                <li class="search">
                     <h2 class="hidden">Поиск</h2>
-                    <!--Здесь будет форма-->
-                </form>
-            </li>
-            <li class="user-login">
-                <h2 class="hidden">Личный кабинет</h2>
-                <a class="login-button" href="#">Вход</a>
-                <form class="modal-login">
-                    <!--Здесь будет форма-->
-                    <a class="login-extralinks" href="#">Забыли пароль?</a>
-                    <a class="login-extralinks" href="#">Новая регистрация</a>
-                </form>            
-            </li>
-            <li class="cart">
-                <h2 class="hidden">Корзина</h2>
-                <span>Пусто</span>
-            </li>
-        </ul>
-        <p class="work-hours">C 10 до 20, ежедневно<br>
-            <span class="phone">8 812 450-25-25</span></p>
-    </section>
-</header>
+                    <form class="modal-login user-nav-btn-small">
+                        <input class="user-field" type="search" placeholder="Что ищем?">
+                        <!--Здесь будет форма-->
+                    </form>
+                </li>
+                <li class="user-login">
+                    <h2 class="hidden">Личный кабинет</h2>
+                    <a class="user-nav-btn-small" href="#">Вход</a>
+                    <form class="modal-login">
+                        <input class="user-field" type="email" placeholder="Электронная почта">
+                        <input class="user-field" type="password" placeholder="Пароль">
+                        <input class="usual-button" type="submit" value="Войти">
+                        <!--Здесь будет форма-->
+                        <a class="login-extralinks" href="#">Забыли пароль?</a>
+                        <a class="login-extralinks" href="#">Новая регистрация</a>
+                    </form>
+                </li>
+                <li class="cart">
+                    <h2 class="hidden">Корзина</h2>
+                    <span class="user-nav-btn-small">Пусто</span>
+                    <form>
+                        <button type="button" class="user-nav-btn-small">2 товара <img src="img/basket-red.svg" alt=""></button>
+                        <table class="modal-login">
+                            <tr>
+                                <td><img src="crestique.jpg" alt=""></td>
+                                <td><img src="mini-icecream.jpg" alt=""></td>
+                                <td>Пломбир с апельсиновым джемом</td>
+                                <td>1,5 кг &#42; <span>200 руб.</span></td>
+                                <td>300 руб.</td>
+                            </tr>
+                            <tr>
+                                <td><img src="crestique.jpg" alt=""></td>
+                                <td><img src="mini-icecream2.jpg" alt=""></td>
+                                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                                <td>1,5 кг &#42; <span>300 руб.</span></td>
+                                <td>450 руб.</td>
+                            </tr>
+                            <tr>
+                                <td class="cart-summ" colspan="5">Итого: 750 руб.</td>
+                            </tr>
+                        </table>
+                        <input class="usual-button" type="submit" value="Оформить заказ">
+                    </form>
+                </li>
+            </ul>
+            <p class="work-hours">C 10 до 20, ежедневно<br>
+                <span class="phone">8 812 450-25-25</span></p>
+        </section>
+    </header>
     <main class="container">
         <section class="big-slider">
             <h1 class="hidden">Глейси – магазин домашнего мороженого</h1>
-            <div class=slider1>
-                <img class="slider-icecream" src="img.jpg" width="267" height="267" alt="крем-брюле и малиновое">
+            <div class="slider1">
                 <p>Крем-брюле и пломбир с малиновым джемом</p>
                 <a class="slider-button" href="#">Давайте оба!</a>
             </div>
-            <div class=slider2>
-                <img class="slider-icecream" src="img.jpg" alt="шоколадное и лимонное">
+            <div class="slider2">
                 <p>Шоколадный пломбир и лимонный сорбет</p>
                 <a class="slider-button" href="#">Давайте оба!</a>
             </div>
-            <div class=slider3>
-                <img class=slider-icecream src="http://placehold.it/150x100"  alt="с помадкой и клубничное">
+            <div class="slider3">
                 <p>Пломбир с помадкой и клубничный щербет</p>
                 <a class="slider-button" href="#">Давайте оба!</a>
             </div>
-            <div class="slider-switch">
-                <label></label>
-                <label></label>
-                <label></label>
-                <!--Переключалка слайдера-->
-            </div>
+            <ul class="slides-switches">
+                <li class="slide-radio">
+                    <button class="slide-btn">Первый слайд</button>
+                </li>
+                <li class="slide-radio">
+                    <button class="slide-btn">Второй слайд</button>
+                </li>
+                <li class="slide-radio">
+                    <button class="slide-btn">Третий слайд</button>
+                </li>
+            </ul>
         </section>
         <section class="bonuses">
             <h2 class="hidden">Акции</h2>
@@ -135,10 +170,10 @@
             <h2 class="hidden">О магазине</h2>
             <p class="about-gllacy-lead"><b>Магазин Глэйси &mdash; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b></p>
             <ul>
-                <li class="about-gllacy-features"> <img src="img/icecream.png" width="49" height="49"> Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий. </li>
-                <li class="about-gllacy-features"> <img src="img/leaf.png" width="49" height="49"> Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество. </li>
-                <li class="about-gllacy-features"> <img src="img/cow.png" width="49" height="49"> Для приготовления мороженого используется настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-                <li class="about-gllacy-features"> <img src="img/gradus.png" width="49" height="49"> Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус
+                <li class="about-gllacy-features"> <img src="img/ice-cream.svg" width="49" height="49" alt=""> Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий. </li>
+                <li class="about-gllacy-features"> <img src="img/cow.svg" width="49" height="49" alt=""> Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество. </li>
+                <li class="about-gllacy-features"> <img src="img/eco.svg" width="49" height="49" alt=""> Для приготовления мороженого используется настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+                <li class="about-gllacy-features"> <img src="img/thermometer.svg" width="49" height="49" alt=""> Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус
                 </li>
             </ul>
         </section>
@@ -162,16 +197,23 @@
                 <p class="contacts-decription">Для заказов по телефону:<br>
                     <span class="contacts-info">8 812 450-25-25</span> (c 10 до 20 ежедневно)</p>
                 <a class="usual-button" href="#">Форма обратной связи</a>
+                <form class="modal-login">
+                    <p>Мы обязательно вам ответим!</p>
+                    <input type="text" placeholder="Как вас зовут?" class="user-field">
+                    <input type="text" placeholder="Ваша почта для ответа?" class="user-field">
+                    <textarea class="user-field">Напишите что-нибудь...</textarea>
+                    <button type="submit">Отправить</button>
+                </form>
             </div>
         </section>
     </main>
     <footer class="main-footer">
         <section class="footer-social">
             <h2 class="hidden">Мы в социальных сетях</h2>
-            <a href="#"><img class=social-icon src="img/" alt="Твиттер"></a>
-            <a href="#"><img class=social-icon src="img/" alt="Инстаграм"></a>
-            <a href="#"><img class=social-icon src="img/" alt="Фейсбук"></a>
-            <a href="#"><img class=social-icon src="img/" alt="В Контакте"></a>
+            <a href="#"><img class=social-icon src="img/twitter.svg" alt="Твиттер"></a>
+            <a href="#"><img class=social-icon src="img/instagram.svg" alt="Инстаграм"></a>
+            <a href="#"><img class=social-icon src="img/fb.svg" alt="Фейсбук"></a>
+            <a href="#"><img class=social-icon src="img/vk.svg" alt="В Контакте"></a>
             <!--Добавить картинкам размеры и ссылки-->
         </section>
         <section class="footer-link">
@@ -186,9 +228,8 @@
                 <img class="developer" src="#" alt="Html-academy"></a>
             <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>&copy; 2017</p>
         </section>
-                
     </footer>
-    
+</div>
     <!--Скрипты подключаются в конец body-->
 </body>
 

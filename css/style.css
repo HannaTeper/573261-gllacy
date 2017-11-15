@@ -5,7 +5,7 @@ body {
     min-height: 1200px;
     background-color: #849d8f;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .slider-button {
@@ -25,7 +25,11 @@ body {
     box-shadow: 0 px 2 px 2 px 0 px rgba(172, 16, 0.64);
 }
 
+/*ТАБЛИЦА*/
 
+.cart-summ {
+    text-align: right;
+}
 
 
 
