@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
-    <!--Установить шрифт-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <title>Глейси – магазин мороженого </title>
 </head>
 
@@ -60,18 +60,17 @@
                     </li>
                 <li class="cart">
                     <h2 class="hidden">Корзина</h2>
-                    <form>
                         <form class="cart-hover">
-                            <button type="button" class="user-nav-btn-small"><img src="img/basket-red.svg" alt=""> 2 товара</button>
+                            <button type="button" class="user-nav-btn-small-hover"><img src="img/basket-red.svg" alt=""> 2 товара</button>
                             <table class="modal-login">
-                                <tr>
+                                <tr class="cart-text">
                                     <td><button type="button" class="cart-cross"><img src="img/cross-small.svg" alt="удалить"></button></td>
                                     <td><img src="mini-icecream.jpg" alt=""></td>
                                     <td>Пломбир с апельсиновым джемом</td>
                                     <td>1,5 кг &#42; <span>200 руб.</span></td>
                                     <td>300 руб.</td>
                                 </tr>
-                                <tr>
+                                <tr class="cart-text">
                                     <td><button type="button" class="cart-cross"><img src="img/cross-small.svg" alt="удалить"></button></td>
                                     <td><img src="mini-icecream2.jpg" alt=""></td>
                                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -82,7 +81,7 @@
                                     <td class="cart-summ" colspan="5">Итого: 750 руб.</td>
                                 </tr>
                             </table>
-                            <button class="usual-button" type="submit">Оформить заказ</button>
+                            <button class="button-usual" type="submit">Оформить заказ</button>
                         </form>
                 </li>
             </ul>
@@ -102,15 +101,15 @@
             <!--Здесь будет форма-->
             <form>
                 <fieldset>
-                    <legend>Сортировка:</legend>
-                    <select>
+                    <legend class="filters-name">Сортировка:</legend>
+                    <select class="filter-items">
                     <option value="popular">по популярности</option>
                     <option value="price">по цене</option>
                     <option value="fatness">по жирности</option>
                 </select>
                 </fieldset>
                     <div class="custom-range">
-                        <p class="range-header">
+                        <p class="range-header filters-name">
                             Цена
                             <span class="">100</span> руб. -
                             <span class="">500</span> руб.
@@ -125,8 +124,8 @@
                         </div>
                     </div>           
                 <fieldset>
-                    <legend>Жирность:</legend>
-                    <ul>
+                    <legend class="filters-name">Жирность:</legend>
+                    <ul class="filter-items">
                         <li>
                             <input type="radio" value="0" id="fat-0" name="fatness">
                             <label for="fat-0">0%</label>
@@ -146,8 +145,8 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Наполнители:</legend>
-                    <ul>
+                    <legend class="filters-name">Наполнители:</legend>
+                    <ul class="filter-items">
                         <li>
                             <input type="checkbox" id="shoko" value="shoko-filling" name="fillings" checked>
                             <label for="shoko">шоколадные</label>
@@ -171,6 +170,7 @@
                 </fieldset>
                 <button type="submit">Применить</button>
             </form>
+        </section>
             <section class="catalogue-inner">
                 <h2 class="hidden">Каталог мороженого</h2>
                 <ul>
