@@ -9,10 +9,6 @@ body {
     font-weight: normal;
 }
 
-h1 {
-    visibility: hidden;
-}
-
 h2 {
     font-family: Roboto;
     font-size: 16px;
@@ -31,6 +27,9 @@ h3 {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
 .slider-button {
     display: inline-block;
     padding: 13px 43px;
@@ -50,7 +49,7 @@ h3 {
 
 /*HEADER*/
 
-.site-navigation {
+.site-navigation a {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -72,8 +71,13 @@ h3 {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
+    display: none;
 }
 
+.hidden {
+    visibility: hidden;
+}
+}
 /*USER NAVIGATION*/
 
 .user-nav-btn-small {
@@ -86,7 +90,6 @@ h3 {
 }    
 
 .cart {
-    background-color: #9db1a5;
     background-image: url("../img/basket.svg") no-repeat;
 }
 
@@ -114,8 +117,13 @@ h3 {
     color: #323232;
 }
 
+.cart-hover {
+  display: none;
+  background-color: #9db1a5;
+}
+
 .login-btn {
-     background-image: url("../img/entrance.svg") no-repeat;
+     background: url("../img/entrance.svg") no-repeat;
 }
 
 .login-extralinks {
@@ -144,8 +152,20 @@ h3 {
     text-decoration: none;
 }
 
+.modal-login {
+ display: none;
+}
+
 .breadcrumbs {
     font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;   
+}
+
+.breadcrumbs a {
+    text-decoration: none;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -211,6 +231,17 @@ h3 {
     box-shadow: 0px 2px 5px #ab5948;
 }
 
+.slider1 {
+    background: url(../img/big-icecream1.png) no-repeat;
+}
+
+.slider2 {
+    background: url(../img/big-icecream2.png) no-repeat;
+}
+
+.slider3 {
+    background: url(../img/big-icecream3.png) no-repeat;
+}
 /*ТАБЛИЦА*/
 
 .cart-summ {
@@ -271,12 +302,13 @@ h3 {
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 20px;
+  border: 0;
 }
 
 /*POPULAR-ITEMS*/
 
 .item-photo {
-    border-radius: 50px;
+    border-radius: 140px;
 }
 
 .item-price {
@@ -289,10 +321,31 @@ h3 {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.hit {
+    background: url(../img/hit.svg);
+}
+
+.item-price {
+    font-size: 45px;
+    line-height: 16px;
+    background: url("..img/ruble.svg");
+}
+
+.item-card a {
+    text-decoration: none;
+}
+
+.button-show-hover {
+ display: none;
+}
+
 /*ABOUT GLLACY*/
 
 .about-gllacy {
   background: url("../img/waffle-pattern.png") no-repeat;
+  width: 1145px;
+  height: 305px;
+  border-radius: 20px;    
 }
 
 .about-gllacy-lead {
@@ -313,6 +366,9 @@ h3 {
 
 .blog {
     background: url("../img/strawberry-back.jpg") no-repeat;
+    width: 560px;
+    height: 220px;
+    border-radius: 20px
 }
 
 .blog-header {
@@ -332,6 +388,9 @@ h3 {
 }
 
 .subscription-block {
+    height: 220px;
+    width: 560px;
+    border-radius: 20px;
     background: url("../img/post-background.jpg") no-repeat;
 }
 
@@ -369,6 +428,7 @@ h3 {
 .modal-feedback {
     background: #f8f7f4;
     border-radius: 15px;
+    display: none;
 }
 
 .feedback-text {
@@ -401,4 +461,16 @@ h3 {
 
 .logo-html {
     background: url(../img/logo-htmlacademy.svg) no-repeat;
+}
+
+.pagination-list a {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.pagination-item-current {
+    background-color: #ffffff;
 }
